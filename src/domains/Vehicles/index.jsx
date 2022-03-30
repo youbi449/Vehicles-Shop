@@ -72,7 +72,7 @@ const VehiculeIndex = () => {
 
     for (let i = 1; i <= pageNumber; i++) {
       pages.push(
-        <PageListItem>
+        <PageListItem key={i}>
           <Link
             href="#"
             onClick={() => setCurrentPage(i)}

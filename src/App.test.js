@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-test("renders cards", () => {
+test("Black or white button must be enabled", () => {
   render(<App />);
-  const linkElement = screen.getByText("My garage");
-  expect(linkElement).toBeInTheDocument();
+  const button = screen.getByRole("button");
+  expect(button).toBeEnabled();
 });

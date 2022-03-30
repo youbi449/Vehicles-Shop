@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 const VehicleContainer = styled.div`
   border: 1px solid #000;
   border-radius: 0.25rem;
@@ -19,6 +19,9 @@ let VehicleCard = (props) => {
       {props.doors < 2 && <div>{props.doors} door</div>}
       {props.doors >= 2 && <div>{props.doors} doors</div>}
       <div>{props.mileage} miles</div>
+      <Link to={`/${props.id}`} state={{ props }}>
+        En savoir +
+      </Link>
     </VehicleContainer>
   );
 };

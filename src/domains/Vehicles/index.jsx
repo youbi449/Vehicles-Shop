@@ -28,7 +28,7 @@ const Link = styled.a`
   color: black !important;
 `;
 
-const PageTitle = styled.h3`
+export const PageTitle = styled.h3`
   text-align: center;
 `;
 
@@ -92,9 +92,10 @@ const VehiculeIndex = () => {
   };
   const Vehicles = () => (
     <>
-      <PageTitle>My garage {isBlackOrWhite && <>Black or White</>}</PageTitle>
+      <PageTitle>{isBlackOrWhite && <>Black or White</>}</PageTitle>
       <ActionContainer>
         <button
+          name="blackOrWhite"
           style={{
             border: "none",
             cursor: "pointer",
